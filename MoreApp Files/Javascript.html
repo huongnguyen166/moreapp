@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+function Book(name,image,description,linkfree,linkpro) {
+this.name = name;
+this.image = image;
+this.description = description;
+this.linkfree = linkfree;
+this.linkpro = linkpro;
+
+}
+
+function shuffleArray(array) {
+for (var i = array.length - 1; i > 0; i--) {
+var j = Math.floor(Math.random() * (i + 1));
+var temp = array[i];
+array[i] = array[j];
+array[j] = temp;
+}
+return array;
+}
+
+var arrayBooks = new Array(
+new Book('10 best book',
+'http://abc.com',
+'ab',
+'description',
+'link free',
+'link pro'
+), new Book('10 best book 2',
+'http://abc.com',
+'ab',
+'description',
+'link free',
+'link pro'
+),
+new Book('10 best book 3',
+'http://abc.com',
+'ab',
+'description',
+'link free',
+'link pro'
+)
+);
+
+var arrayBooks2 = shuffleArray(arrayBooks);
+
+
+$(document).ready(function(){
+$("p").click(function(){
+$(this).hide();
+});
+arrayBooks = shuffleArray(arrayBooks);
+alert(arrayBooks2[0].name);
+});
+
+
+</script>
+</head>
+<body>
+
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+</body>
+</html>

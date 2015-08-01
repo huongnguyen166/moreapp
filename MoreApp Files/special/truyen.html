@@ -30,8 +30,8 @@
         
         #navigation a {
             font-size: 14px;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 10px;
+            padding-right: 8px;
             color: white;
             text-decoration: none;
         }
@@ -160,7 +160,7 @@
             underline:none !important;    text-decoration: none;
         }
         .bold{
-            font-size:17px !important;
+            font-size:15px !important;
             color:#FA6616 !important;
             /*text-decoration: underline !important;*/
         }
@@ -169,29 +169,13 @@
         
         <body>
             <div id="navigation">
-                <a href="#" class="menugroup" onclick="didSelect(0);">Sách Hay</a>
-                <a href="#" class="menugroup bold" onclick="didSelect(1);">Truyện Tranh</a>
+                <a href="#" class="menugroup bold" onclick="didSelect(0);">Sách Hay</a>
+                <a href="#" class="menugroup" onclick="didSelect(1);">Truyện Tranh</a>
                 <a href="#" class="menugroup" onclick="didSelect(2);">Học Tập-Giải Trí</a>
             </div>
             <script>
-                
                 var i =1;
-                function didSelect(selected){
-                    var buttons = document.getElementsByClassName("menugroup");
-                    
-                    for(var i = 0; i < buttons.length; ++i){
-                        if(i==selected){
-                            buttons[i].setAttribute("class", "menugroup bold");
-                            document.getElementById('shouldHidden'+i).style.display = 'block';
-                        }
-                        else{
-                            buttons[i].setAttribute("class", "menugroup");
-                            document.getElementById('shouldHidden'+i).style.display = 'none';
-                        }
-                    }
-                }
                 </script>
-            
             
             
             <div id="content" class="division">
@@ -207,7 +191,7 @@
                     <div class="tab-content albums fnRTContent" id="fnRTAlbum" rt-source="https://www.google.com.vn/?gfe_rd=cr&ei=vxu_VMTrLuGJ8QeKyoH4AQ&gws_rd=ssl">
                         
                         
-                        <div id="shouldHidden1" style="display:block">
+                        <div id="shouldHidden1" style="display:none">
                             
                             <a class="content-items" href="https://goo.gl/TuAV0Y">
                                 
@@ -407,10 +391,10 @@
                                     
                                     </a>
                             
-                           
+                            
                         </div>
                         
-                        <div id="shouldHidden0" style="display:none">
+                        <div id="shouldHidden0" style="display:block">
                             <script>
                                 i=1;
                                 </script>
@@ -440,9 +424,9 @@
                                     
                                     <input type="submit" value="Pro" onclick="window.location='http://goo.gl/x0CxXm';" />
                                     </a>
-                        
                             
-                                                                                    <a class="content-items">
+                            
+                            <a class="content-items">
                                 
                                 <img src="https://lh6.googleusercontent.com/-NoilRfDd3zc/VXEiGc_IFjI/AAAAAAAAA6k/ziaUXWObMGU/s180-no/10671408_456458171186334_3855062383383526385_n.jpg"  class="album-img">
                                     
@@ -707,38 +691,38 @@
                                     <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/vmKz0L';" />
                                     
                                     </a>
-
-<a class="content-items" href="http://goo.gl/pM0jDZ">
-    
-    <img src="https://lh3.googleusercontent.com/-wWU53FeNF3w/VXEiJehYdhI/AAAAAAAAA7k/q5iuEUJQRHo/s200-no/10940604_413704332128385_3443694932816008720_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img">
-        
-        <h3><script>document.write(i);i++;</script>) Phim Hoạt Hình Doremon</h3>
-        
-        <h4>Tuyển tập những bộ phim hoạt hình HD về chú mèo máy doremon.</h4>
-        
-        <form action="http://goo.gl/pM0jDZ">
-            
-            <input type="submit" value="Tải Ngay">
-                
-                </form>
-        
-        </a>
-
-<a class="content-items" href="http://goo.gl/6luLzN">
-    
-    <img src="https://lh6.googleusercontent.com/-AI7TfSEi4EA/VXEiFSZdtJI/AAAAAAAABBA/dgLNH0h1utE/s120-no/10468686_421195368045948_4657954117362722845_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img">
-        
-        <h3><script>document.write(i);i++;</script>) VKara - Hát Karaoke Tiếng Việt</h3>
-        
-        <h4>KHÔNG PHẢI DẠNG VỪA ĐÂU!!!</h4>
-        
-        <form action="http://goo.gl/6luLzN">
-            
-            <input type="submit" value="Tải Ngay">
-                
-                </form>
-        
-        </a>
+                            
+                            <a class="content-items" href="http://goo.gl/pM0jDZ">
+                                
+                                <img src="https://lh3.googleusercontent.com/-wWU53FeNF3w/VXEiJehYdhI/AAAAAAAAA7k/q5iuEUJQRHo/s200-no/10940604_413704332128385_3443694932816008720_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Phim Hoạt Hình Doremon</h3>
+                                    
+                                    <h4>Tuyển tập những bộ phim hoạt hình HD về chú mèo máy doremon.</h4>
+                                    
+                                    <form action="http://goo.gl/pM0jDZ">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/6luLzN">
+                                
+                                <img src="https://lh6.googleusercontent.com/-AI7TfSEi4EA/VXEiFSZdtJI/AAAAAAAABBA/dgLNH0h1utE/s120-no/10468686_421195368045948_4657954117362722845_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) VKara - Hát Karaoke Tiếng Việt</h3>
+                                    
+                                    <h4>KHÔNG PHẢI DẠNG VỪA ĐÂU!!!</h4>
+                                    
+                                    <form action="http://goo.gl/6luLzN">
+                                        
+                                        <input type="submit" value="Tải Ngay">
+                                            
+                                            </form>
+                                    
+                                    </a>
                             <a class="content-items">
                                 
                                 <img src="https://lh3.googleusercontent.com/-6BYIaamofpE/VbB4mdvZCKI/AAAAAAAABSw/8-ABNvZXCQk/s180-Ic42/Icon_180.png"  class="album-img">
@@ -773,8 +757,8 @@
                                     <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/Pm4vOj';" />
                                     
                                     </a>
-
-
+                            
+                            
                             <a class="content-items">
                                 
                                 <img src="https://lh3.googleusercontent.com/-kQylzYEvTgo/VbB4t_AvuGI/AAAAAAAABTI/9hz7UM21hpU/s180-Ic42/Icon_180.png"  class="album-img">
@@ -830,7 +814,7 @@
                                     <input type="submit" value="Tải Ngay" onclick="window.location='https://goo.gl/mbcwpt';" />
                                     
                                     </a>
-
+                            
                             <a class="content-items">
                                 
                                 <img src="https://lh3.googleusercontent.com/-XzAcvz3JjTQ/VbB4wEG_ADI/AAAAAAAABTQ/lD2hPdsZrWo/s180-Ic42/Icon_180.png"  class="album-img">
@@ -852,6 +836,29 @@
             </div>
             
             </div>
+            
+            
+            <script>
+                
+                
+                function didSelect(selected){
+                    var buttons = document.getElementsByClassName("menugroup");
+                    
+                    for(var id = 0; id < buttons.length; ++id){
+                        if(id==selected){
+                            buttons[id].setAttribute("class", "menugroup bold");
+                            document.getElementById('shouldHidden'+id).style.display = 'block';
+                        }
+                        else{
+                            buttons[id].setAttribute("class", "menugroup");
+                            document.getElementById('shouldHidden'+id).style.display = 'none';
+                        }
+                    }
+                }
+            
+            didSelect(1);
+                </script>
+            
             
         </body>
         

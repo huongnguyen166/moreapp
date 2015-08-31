@@ -3,46 +3,91 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         
         <style>
-            
-            /** Reset **/
-            
-            html{color:#000;background:#f2f2f2;}
-            
-            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
-            
-            table{border-collapse:collapse;border-spacing:0;}
-            
-            fieldset,img{border:0;}
-            
-            address,caption,cite,code,dfn,em,strong,th,var,optgroup,i{font-style:inherit;font-weight:inherit;}
-            
-            del,ins{text-decoration:none;}
-            
-            li{list-style:none;}
-            
-            caption,th{text-align:left;}
-            
-            h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
-            
-            q:before,q:after{content:'';}
-            
-            abbr,acronym{border:0;font-variant:normal;}
-            
-            sup{vertical-align:baseline;}
-            
-            sub{vertical-align:baseline;}
-            
-            legend{color:#000;}
-            
-            input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;outline:none}
-            
-            /** Style 1.8*/
-            
-            body { background: #fff;color: #808080;font-size: 14px;font-family: Segoe UI,Arial,Geneva,sans-serif;
-                
-                line-height: 1.4;-webkit-text-size-adjust: none;-webkit-font-smoothing: subpixel-antialiased;-webkit-overflow-scrolling: touch;
-                
+            body {
+                padding: 0; /* Gets rid of the automatic padding */
+                margin: 0;	/*	on HTML documents */
+                font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+                font-size: 12px;
             }
+        
+        #navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #ffffff;
+            height: 35px;
+            text-align: left;
+            padding-top: 15px;
+            /* Adds shadow to the bottom of the bar */
+            -webkit-box-shadow: 0px 0px 8px 0px #000000;
+            -moz-box-shadow: 0px 0px 8px 0px #000000;
+            box-shadow: 0px 0px 8px 0px #000000;
+            /* Adds the transparent background */
+            background-color: rgba(1, 1, 1, 0.8);
+            color: rgba(1, 1, 1, 0.8);
+            z-index:99999;
+        }
+        
+        #navigation a {
+            font-size: 14px;
+            padding-left: 10px;
+            padding-right: 8px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        #navigation a:hover {
+            color: grey;
+        }
+        
+        /* This just adds some style to the placeholder text */
+        
+        #content {
+            padding-top: 70px;
+            padding-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /** Reset **/
+        
+        html{color:#000;background:#f2f2f2;}
+        
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+        
+        table{border-collapse:collapse;border-spacing:0;}
+        
+        fieldset,img{border:0;}
+        
+        address,caption,cite,code,dfn,em,strong,th,var,optgroup,i{font-style:inherit;font-weight:inherit;}
+        
+        del,ins{text-decoration:none;}
+        
+        li{list-style:none;}
+        
+        caption,th{text-align:left;}
+        
+        h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+        
+        q:before,q:after{content:'';}
+        
+        abbr,acronym{border:0;font-variant:normal;}
+        
+        sup{vertical-align:baseline;}
+        
+        sub{vertical-align:baseline;}
+        
+        legend{color:#000;}
+        
+        input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;outline:none}
+        
+        /** Style 1.8
+         
+         body { background: #fff;color: #808080;font-size: 14px;font-family: Segoe UI,Arial,Geneva,sans-serif;
+         
+         line-height: 1.4;-webkit-text-size-adjust: none;-webkit-font-smoothing: subpixel-antialiased;-webkit-overflow-scrolling: touch;
+         
+         }*/
         
         .division {overflow: hidden;
             
@@ -98,556 +143,606 @@
         
         .content .content-items h4{
             
-            display: block;overflow: hidden;max-height: 3em;  font-size: 13px;
+            display: block;overflow: hidden;max-height: 2.7em;  font-size: 13px;
             
             color: #555;margin: 0;padding: 0;webkit-margin-before: 0.33em;-webkit-margin-after: 0.33em;
             
             -webkit-margin-start: 0px;-webkit-margin-end: 0px;  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
             
+            
+        }
+        
+        .actived a{
+            color:red;
         }
         
         a:hover, a:visited, a:link, a:active{
             underline:none !important;    text-decoration: none;
         }
+        .bold{
+            font-size:15px !important;
+            color:#FA6616 !important;
+            /*text-decoration: underline !important;*/
+        }
         
             </style>
         
-        <body class="mobile">
-            
+        <body>
+            <div id="navigation">
+                <a href="#" class="menugroup bold" onclick="didSelect(0);">Comics And Movies</a>
+                <a href="#" class="menugroup" onclick="didSelect(1);">Photo Editor And Wallpapers</a>
+                <a href="#" class="menugroup" onclick="didSelect(2);">Books</a>
+                <a href="#" class="menugroup" onclick="didSelect(3);">Apps For Your Camera</a>
+                <a href="#" class="menugroup" onclick="didSelect(4);">Office</a>
+            </div>
             <script>
-                
                 var i =1;
-                
                 </script>
             
             
-            
-            <div id="fnWrapper" class="division">
+            <div id="content" class="division">
                 
                 <div class="content" id="fnBodyContent">
                     
-                    <div class="loading none" id="fnLoading"><img src="http://static.mp3.zdn.vn/skins/mp3_mobile/images/loading.gif">Loading...</div>
-                    
-                    <div class="tab-content songs fnRTContent none" id="fnRTSong" rt-source="http://m.mp3.zing.vn/index/real-time/get-song">
-                        
-                    </div>
-                    
                     <div class="tab-content albums fnRTContent" id="fnRTAlbum" rt-source="https://www.google.com.vn/?gfe_rd=cr&ei=vxu_VMTrLuGJ8QeKyoH4AQ&gws_rd=ssl">
-                        <a class="content-items">
-                            
-                            <img src="https://lh3.googleusercontent.com/-HElIiZIME5E/VXEi8rWS5FI/AAAAAAAABBk/-Hpp-OxQtA0/s120-Ic42/10422280_447392998759518_2885060917078094887_n-2.jpg" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) Movies For Doraemon</h3>
-                                
-                                <h4>Doraemon Online.</h4>
-                                
-                                <input type="submit" value="Download Now" onclick="window.location='https://goo.gl/ITg1gM';" />
-                                
-                                </a>
                         
-                        <a class="content-items">
-                            
-                            <img src="https://lh6.googleusercontent.com/-RxGq5PHXo8w/VXEjHNTIePI/AAAAAAAABBQ/xavIaNXkbDY/s180-no/10501920_470413116457506_7748123959745154396_n.jpg" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) 9 Books Change Your Life</h3>
-                                
-                                <h4>9 Books Steve Jobs Thought Everybody Should Read.</h4>
-                                
-                                <input type="submit" value="Nature" onclick="window.location='https://goo.gl/PDoXxO';" />
-                                
-                                <input type="submit" value="Pro" onclick="window.location='https://goo.gl/EMBwby';" />
-                                
-                                </a>
                         
-                        <a class="content-items" href="http://goo.gl/9g7iBL">
+                        <div id="shouldHidden0" style="display:none">
+                            <script>
+                                i=1;
+                                </script>
                             
-                            <img src="https://lh3.googleusercontent.com/-vyvQ1HB-p_Y/VXEiInCO7XI/AAAAAAAABBA/1LiSCNHM-tw/s200-no/10924763_413704358795049_5642165209026986300_n.jpg" class="album-img" height="72" width="72">
+                            <a class="content-items">
                                 
-                                <h3><script>document.write(i);i++;</script>) Photo Sketch Maker</h3>
-                                
-                                <h4>The COOLEST sketch maker in appstore, a great app, must to have!</h4>
-                                
-                                <form action="http://goo.gl/9g7iBL">
+                                <img src="https://lh3.googleusercontent.com/-HElIiZIME5E/VXEi8rWS5FI/AAAAAAAABBk/-Hpp-OxQtA0/s120-Ic42/10422280_447392998759518_2885060917078094887_n-2.jpg" class="album-img" height="72" width="72">
                                     
-                                    <input type="submit" value="More Info">
-                                        
-                                        </form>
-                                
-                                </a>
-                        
-                        <a class="content-items" href="http://goo.gl/reS1jF">
-                            
-                            <img src="https://lh4.googleusercontent.com/-4YPs597_ISU/VXEiNMDmitI/AAAAAAAABBA/n5stx8Kc3-0/s180-no/10986948_421194501379368_5675810936497368854_n.jpg" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) Doraemon long stories</h3>
-                                
-                                <h4>One of the most famous comics from Japan.</h4>
-                                
-                                <form action="http://goo.gl/reS1jF">
+                                    <h3><script>document.write(i);i++;</script>) Movies For Doraemon</h3>
                                     
-                                    <input type="submit" value="More Info">
-                                        
-                                        </form>
-                                
-                                </a>
-                        
-                        <a class="content-items" href="http://goo.gl/gm3Epk">
-                            
-                            <img src="https://lh4.googleusercontent.com/-vSl7VOO3wMA/VXEiEYDUDPI/AAAAAAAABBA/s-4P8x9Sifo/s180-no/10406990_455794737919344_2260372899848501422_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) Doraemon short stories</h3>
-                                
-                                <h4>One of the most famous comics from Japan.</h4>
-                                
-                                <form action="http://goo.gl/gm3Epk">
+                                    <h4>Doraemon Online.</h4>
                                     
-                                    <input type="submit" value="More Info">
-                                        
-                                        </form>
-                                
-                                </a>
-                        
-                        <a class="content-items" href="http://goo.gl/IXrnbL">
-                            
-                            <img src="https://lh4.googleusercontent.com/-WnfHiy0n8_M/VXEiVJ3l-kI/AAAAAAAAA_8/p-7dRAeYQ7s/s120-no/1499550_420996331399185_63702180728246577_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) PhotoShop Tutorials</h3>
-                                
-                                <h4>Learn how to use Adobe Photoshop with tutorials: From beginner to expert.</h4>
-                                
-                                <form action="http://goo.gl/IXrnbL">
+                                    <input type="submit" value="Download Now" onclick="window.location='https://goo.gl/ITg1gM';" />
                                     
-                                    <input type="submit" value="More Info">
-                                        
-                                        </form>
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/reS1jF">
                                 
-                                </a>
-                        
-                        <a class="content-items" href="http://goo.gl/P43IH1">
-                            
-                            <img src="https://lh4.googleusercontent.com/-L-KsL8bd4DE/VXEiV_5hxuI/AAAAAAAABAk/TEeuicNBJjE/s120-no/1622810_420996878065797_335766269408376401_n.jpg" class="album-img" height="72" width="72">
-                                
-                                <h3><script>document.write(i);i++;</script>) Makeup Magic</h3>
-                                
-                                <h4>A great app to help you do better with thousands of video tutorials with many lessons of the different categories.</h4>
-                                
-                                <form action="http://goo.gl/P43IH1">
+                                <img src="https://lh4.googleusercontent.com/-4YPs597_ISU/VXEiNMDmitI/AAAAAAAABBA/n5stx8Kc3-0/s180-no/10986948_421194501379368_5675810936497368854_n.jpg" class="album-img" height="72" width="72">
                                     
-                                    <input type="submit" value="More Info">
-                                        
-                                        </form>
-                                
-                                </a>                            <a class="content-items" >
+                                    <h3><script>document.write(i);i++;</script>) Doraemon long stories</h3>
                                     
-                                    <img src="https://lh6.googleusercontent.com/-m5ws5ilaDcA/VXEiSyjjEFI/AAAAAAAAA-4/PiYJrDvokjc/s120-no/11188456_461665627332255_3894398706700184767_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD810</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D810</h4>
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/0NQzSg';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
+                                    <h4>One of the most famous comics from Japan.</h4>
                                     
-                                    <img src="https://lh4.googleusercontent.com/-UiW8rth2hic/VXEiRvINCKI/AAAAAAAAA_w/RBkizLUz6l0/s120-no/11159525_461666097332208_9051771325971645117_n.jpg" class="album-img" height="72" width="72">
+                                    <form action="http://goo.gl/reS1jF">
                                         
-                                        <h3><script>document.write(i);i++;</script>) iD5500</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D5500</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='https://goo.gl/ZpLtVl';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/dHkYrm';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-wJZ2194MkoY/VXEiOk8j7DI/AAAAAAAABBA/TGA_BEDk6Zc/s120-no/11059702_461665473998937_5801846433496921398_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD750</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D750</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='https://goo.gl/Vve2QS';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/TahG9g';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-m-hOTPg7FcU/VXEiTb6FaAI/AAAAAAAAA_E/RZ1_lkOB9So/s120-no/11193300_461665777332240_4225697368648703680_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD3300</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D3300</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='https://goo.gl/60uMvl';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/iOqdzJ';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="https://goo.gl/xrLqn8">
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-0JrUElcOk3k/VXEiNzqHRhI/AAAAAAAAA9I/3eENhZBEipo/s120-no/11057683_461666277332190_2538998391698525705_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD7000</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D7000</h4>
-                                        
-                                        <form action="https://goo.gl/xrLqn8">
+                                        <input type="submit" value="More Info">
                                             
-                                            <input type="submit" value="More Info">
-                                                
-                                                </form>
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
+                                            </form>
                                     
-                                    <img src="https://lh6.googleusercontent.com/-J8CWzdl03Zs/VXEiGosoWBI/AAAAAAAAA64/mVIUOoj_odo/s120-no/10690130_461666557332162_8691738476978985886_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iEOS70D</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS 70D</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='https://goo.gl/K3x9c3';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/cAaIkx';" />
-                                        
-                                        </a>
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/gm3Epk">
                                 
-                                <a class="content-items" >
+                                <img src="https://lh4.googleusercontent.com/-vSl7VOO3wMA/VXEiEYDUDPI/AAAAAAAABBA/s-4P8x9Sifo/s180-no/10406990_455794737919344_2260372899848501422_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
                                     
-                                    <img src="https://lh6.googleusercontent.com/-K4Zy6e7bVaE/VXEiDrjJUfI/AAAAAAAAA5o/_2SGtkJHNLU/s120-no/10360709_461666850665466_7950721212490503309_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iα77II</h3>
-                                        
-                                        <h4>Guide And Training For Sony α77II</h4>
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/YOiq5n';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items">
+                                    <h3><script>document.write(i);i++;</script>) Doraemon short stories</h3>
                                     
-                                    <img src="https://lh4.googleusercontent.com/-Gv2oO1RPKN8/VXEiSGGb5_I/AAAAAAAAA_s/43bGlLaDLxM/s120-no/11169897_461666607332157_8600574803566117784_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iEOS550D</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS 550D</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/uAhT0y';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/6BIf22';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
+                                    <h4>One of the most famous comics from Japan.</h4>
                                     
-                                    <img src="https://lh4.googleusercontent.com/-j_KGI-4fCFY/VXEiSKZ03QI/AAAAAAAAA_o/PVMHuJJnUKU/s120-no/11183453_461666487332169_9186329010843184592_n.jpg" class="album-img" height="72" width="72">
+                                    <form action="http://goo.gl/gm3Epk">
                                         
-                                        <h3><script>document.write(i);i++;</script>) iEOS60D</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS 60D</h4>
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ixJEH7';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-iTsiEavLb2E/VXEiKK9XwoI/AAAAAAAAA70/gO6aozTk_c0/s120-no/10954467_461666673998817_8977135744917709143_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iEOSRebelT3</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS Rebel T3</h4>
-                                        
-                                        <input type="submit" value="More Info" onclick="window.location='https://goo.gl/FyTmKl';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-WL7LuN7W0fk/VXEiEmeU9jI/AAAAAAAAA58/O9hJO1kS9LU/s120-no/10409150_461664437332374_7253211209577173414_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD40</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D40</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/l7BFlc';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ypOrdM';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-fKUN8eB4ny0/VXEiFGs0VNI/AAAAAAAABBA/k363RCf2Ggg/s120-no/10458470_461665200665631_6741908667842794867_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD300s</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D300s</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/nU2nUZ';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ixJEH7';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/6d5YJG" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-srwhMKnU00Q/VXEiPX9DO_I/AAAAAAAABBA/_u-3Ch1ehSo/s120-no/11081290_461665137332304_640019092375379763_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD300 Pro</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D300</h4>
-                                        
-                                        <input type="submit" value="More Info" onclick="window.location='http://goo.gl/6d5YJG';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/ow0sh2" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-8VIUYNI72o4/VXEiEJ8rQiI/AAAAAAAAA54/ENWcbRqtFvU/s120-no/10406817_461665557332262_8417825149302995600_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD800</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D800</h4>
-                                        
-                                        <input type="submit" value="More Info" onclick="window.location='http://goo.gl/ow0sh2';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/nTHp9Z" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-Kg8eyEzVmXQ/VXEiDqFqfLI/AAAAAAAABBA/AA7YVy7sjPU/s120-no/10171646_461665963998888_5099444242317551977_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD5000</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D5000</h4>
-                                        
-                                        <input type="submit" value="More Info" onclick="window.location='http://goo.gl/nTHp9Z';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-j_KGI-4fCFY/VXEiSKZ03QI/AAAAAAAAA_o/PVMHuJJnUKU/s120-no/11183453_461666487332169_9186329010843184592_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iEOS60D</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS 60D</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/B3TFNY';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/DYir75';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-hwOiYCm9syw/VXEiShhPW4I/AAAAAAAAA-s/xpApw917kL0/s120-no/11188180_461666733998811_8564277995201138935_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iEOSRebelT3i</h3>
-                                        
-                                        <h4>Guide And Training For Canon EOS Rebel T3i</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/HLzm0f';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/wSYkXI';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items">
-                                    
-                                    <img src="https://lh3.googleusercontent.com/-lkM8ZnNtSQw/VXEiNr2zuNI/AAAAAAAAA9E/QVeFzCmN-nw/s152-no/11035843_461665077332310_8584511488073543992_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD90</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D90</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/2XLjV3';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/Ruxu1c';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items">
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-ND2iGCWweug/VXEiQB14bfI/AAAAAAAABAs/8mqfNQxt1KA/s120-no/11118487_461665667332251_8127707352828324213_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) iD3100</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D3100</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/rrXpGR';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/ntrkFa';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items">
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-Q2b1t74GB7w/VXEiRfM71cI/AAAAAAAABAc/VxzNuIfSL4s/s120-no/11156227_461667893998695_6197588378487229748_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Nikon D5100 Guide</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D5100</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/u2DcPy';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='https://goo.gl/DJA3wr';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/PHu9Wz" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-BG9NRruq5xg/VXEiPe3BOwI/AAAAAAAAA9o/3CJsdaYLEEI/s120-no/11071075_461667510665400_978856137244145899_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For Corel VideoStudio</h3>
-                                        
-                                        <h4>Guide And Training For Sony Vegas</h4>
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/PHu9Wz';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-mYEJIUly3LA/VXEiRHys8mI/AAAAAAAAA-M/pCbCCICS5z8/s120-no/11150848_461668793998605_3534029497915907984_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For Quickbooks</h3>
-                                        
-                                        <h4>Guide And Training For Quickbooks</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/fRGH26';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/KuhCIV';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-HmWVX-BoTsk/VXEiLnUNT8I/AAAAAAAAA8U/budnrgCs3p8/s120-no/10983318_461668977331920_3623854926643424162_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For Sony Vegas</h3>
-                                        
-                                        <h4>Guide And Training For Sony Vegas</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/AxFaVW';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/I9sX2T';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh6.googleusercontent.com/-AzwfhuG_b9o/VXEiTZIt6fI/AAAAAAAAA_A/2tlV4Fe2vuI/s120-no/11196270_461667763998708_2249979270461716857_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For CorelDraw</h3>
-                                        
-                                        <h4>Guide And Training For CorelDraw</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/SF8sPp';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/NohwtC';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-XTVdJdz07E0/VXEiUerQmiI/AAAAAAAAA_k/6W53Rv7-YCI/s120-no/13719_461667830665368_1424047619107077385_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For MS Project</h3>
-                                        
-                                        <h4>Guide And Training For Nikon D300</h4>
-                                        
-                                        <input type="submit" value="Nature" onclick="window.location='http://goo.gl/x5LLR4';" />
-                                        
-                                        <input type="submit" value="Pro" onclick="window.location='http://goo.gl/0tejFP';" />
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/ylZEdO" >
-                                    
-                                    <img src="https://lh4.googleusercontent.com/-ELn525jsBUg/VXEiSv3U9hI/AAAAAAAAA_I/SlAi8UQ1eTo/s120-no/11188317_461668673998617_5195986237805711401_n.jpg" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Videos Training For Premiere Elements</h3>
-                                        
-                                        <h4>Guide And Training For Premiere</h4>
-                                        
-                                        <form action="http://goo.gl/ylZEdO">
+                                        <input type="submit" value="More Info">
                                             
-                                            <input type="submit" value="More Info">
-                                                
-                                                </form>
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/YSSDNl">
+                                            </form>
                                     
-                                    <img src="https://lh3.googleusercontent.com/sIjXVA3YOaW7XuQMyy7XWocG4wShPBo1ujQdW8FV51Q=s175-no" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Kid Learn</h3>
-                                        
-                                        <h4>Funny app for Kids learning English.</h4>
-                                        
-                                        <form action="http://goo.gl/YSSDNl">
-                                            
-                                            <input type="submit" value="More Info">
-                                                
-                                                </form>
-                                        
-                                        </a>
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/i32NKj">
                                 
-                                <a class="content-items" href="http://goo.gl/i32NKj">
+                                <img src="https://lh6.googleusercontent.com/-mMpUeEvg8O8/VXEiVRvyR6I/AAAAAAAAA_4/LN9FVkYS_1E/s120-no/1506674_421001428065342_8476868990988401817_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
                                     
-                                    <img src="https://lh6.googleusercontent.com/-mMpUeEvg8O8/VXEiVRvyR6I/AAAAAAAAA_4/LN9FVkYS_1E/s120-no/1506674_421001428065342_8476868990988401817_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
-                                        
-                                        <h3><script>document.write(i);i++;</script>) Funny Video Pro</h3>
-                                        
-                                        <h4>You won't not stop laughing while seeing those jokes. Have a great time using app!</h4>
-                                        
-                                        <form action="http://goo.gl/i32NKj">
-                                            
-                                            <input type="submit" value="More Info">
-                                                
-                                                </form>
-                                        
-                                        </a>
-                                
-                                <a class="content-items" href="http://goo.gl/nY0y7b">
+                                    <h3><script>document.write(i);i++;</script>) Funny Video Pro</h3>
                                     
-                                    <img src="https://lh6.googleusercontent.com/-Ww6rRTnFopA/VXEiOOEMPiI/AAAAAAAAA9Q/PI7m5gfqmkw/s180-no/11058658_455795957919222_3190188673097813950_n.jpg" class="album-img" height="72" width="72">
+                                    <h4>You won't not stop laughing while seeing those jokes. Have a great time using app!</h4>
+                                    
+                                    <form action="http://goo.gl/i32NKj">
                                         
-                                        <h3><script>document.write(i);i++;</script>) Christmas Wallpaper</h3>
-                                        
-                                        <h4>It can't be more cool to celebrate Christmas by enjoying our App</h4>
-                                        
-                                        <form action="http://goo.gl/nY0y7b">
+                                        <input type="submit" value="More Info">
                                             
-                                            <input type="submit" value="More Info">
-                                                
-                                                </form>
+                                            </form>
+                                    
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/YSSDNl">
+                                
+                                <img src="https://lh3.googleusercontent.com/sIjXVA3YOaW7XuQMyy7XWocG4wShPBo1ujQdW8FV51Q=s175-no" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Kid Learn</h3>
+                                    
+                                    <h4>Funny app for Kids learning English.</h4>
+                                    
+                                    <form action="http://goo.gl/YSSDNl">
                                         
-                                        </a>
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                        </div>
+                        <div id="shouldHidden1" style="display:block">
+                            <script>
+                                var i =1;
+                                </script>
+                            <a class="content-items" href="http://goo.gl/9g7iBL">
                                 
+                                <img src="https://lh3.googleusercontent.com/-vyvQ1HB-p_Y/VXEiInCO7XI/AAAAAAAABBA/1LiSCNHM-tw/s200-no/10924763_413704358795049_5642165209026986300_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Photo Sketch Maker</h3>
+                                    
+                                    <h4>The COOLEST sketch maker in appstore, a great app, must to have!</h4>
+                                    
+                                    <form action="http://goo.gl/9g7iBL">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/IXrnbL">
                                 
+                                <img src="https://lh4.googleusercontent.com/-WnfHiy0n8_M/VXEiVJ3l-kI/AAAAAAAAA_8/p-7dRAeYQ7s/s120-no/1499550_420996331399185_63702180728246577_n.jpg" alt="Quá Khứ Nhạt Nhòa (Single)" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) PhotoShop Tutorials</h3>
+                                    
+                                    <h4>Learn how to use Adobe Photoshop with tutorials: From beginner to expert.</h4>
+                                    
+                                    <form action="http://goo.gl/IXrnbL">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/nY0y7b">
                                 
+                                <img src="https://lh6.googleusercontent.com/-Ww6rRTnFopA/VXEiOOEMPiI/AAAAAAAAA9Q/PI7m5gfqmkw/s180-no/11058658_455795957919222_3190188673097813950_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Christmas Wallpaper</h3>
+                                    
+                                    <h4>It can't be more cool to celebrate Christmas by enjoying our App</h4>
+                                    
+                                    <form action="http://goo.gl/nY0y7b">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+
+                        </div>
+                        <div id="shouldHidden2" style="display:none">
+                            <script>
+                                var i =1;
+                                </script>
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-RxGq5PHXo8w/VXEjHNTIePI/AAAAAAAABBQ/xavIaNXkbDY/s180-no/10501920_470413116457506_7748123959745154396_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) 9 Books Change Your Life</h3>
+                                    
+                                    <h4>9 Books Steve Jobs Thought Everybody Should Read.</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='https://goo.gl/PDoXxO';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/EMBwby';" />
+                                    
+                                    </a>
+                        </div>
+                        <div id="shouldHidden3" style="display:none">
+                            <script>
+                                var i =1;
+                                </script>
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-m5ws5ilaDcA/VXEiSyjjEFI/AAAAAAAAA-4/PiYJrDvokjc/s120-no/11188456_461665627332255_3894398706700184767_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD810</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D810</h4>
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/0NQzSg';" />
+                                    
+                                    </a>
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-UiW8rth2hic/VXEiRvINCKI/AAAAAAAAA_w/RBkizLUz6l0/s120-no/11159525_461666097332208_9051771325971645117_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD5500</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D5500</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='https://goo.gl/ZpLtVl';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/dHkYrm';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-wJZ2194MkoY/VXEiOk8j7DI/AAAAAAAABBA/TGA_BEDk6Zc/s120-no/11059702_461665473998937_5801846433496921398_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD750</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D750</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='https://goo.gl/Vve2QS';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/TahG9g';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-m-hOTPg7FcU/VXEiTb6FaAI/AAAAAAAAA_E/RZ1_lkOB9So/s120-no/11193300_461665777332240_4225697368648703680_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD3300</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D3300</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='https://goo.gl/60uMvl';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/iOqdzJ';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="https://goo.gl/xrLqn8">
+                                
+                                <img src="https://lh6.googleusercontent.com/-0JrUElcOk3k/VXEiNzqHRhI/AAAAAAAAA9I/3eENhZBEipo/s120-no/11057683_461666277332190_2538998391698525705_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD7000</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D7000</h4>
+                                    
+                                    <form action="https://goo.gl/xrLqn8">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-J8CWzdl03Zs/VXEiGosoWBI/AAAAAAAAA64/mVIUOoj_odo/s120-no/10690130_461666557332162_8691738476978985886_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOS70D</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS 70D</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='https://goo.gl/K3x9c3';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/cAaIkx';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-K4Zy6e7bVaE/VXEiDrjJUfI/AAAAAAAAA5o/_2SGtkJHNLU/s120-no/10360709_461666850665466_7950721212490503309_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iα77II</h3>
+                                    
+                                    <h4>Guide And Training For Sony α77II</h4>
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/YOiq5n';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh4.googleusercontent.com/-Gv2oO1RPKN8/VXEiSGGb5_I/AAAAAAAAA_s/43bGlLaDLxM/s120-no/11169897_461666607332157_8600574803566117784_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOS550D</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS 550D</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/uAhT0y';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/6BIf22';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-j_KGI-4fCFY/VXEiSKZ03QI/AAAAAAAAA_o/PVMHuJJnUKU/s120-no/11183453_461666487332169_9186329010843184592_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOS60D</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS 60D</h4>
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ixJEH7';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-iTsiEavLb2E/VXEiKK9XwoI/AAAAAAAAA70/gO6aozTk_c0/s120-no/10954467_461666673998817_8977135744917709143_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOSRebelT3</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS Rebel T3</h4>
+                                    
+                                    <input type="submit" value="More Info" onclick="window.location='https://goo.gl/FyTmKl';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-WL7LuN7W0fk/VXEiEmeU9jI/AAAAAAAAA58/O9hJO1kS9LU/s120-no/10409150_461664437332374_7253211209577173414_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD40</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D40</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/l7BFlc';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ypOrdM';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-fKUN8eB4ny0/VXEiFGs0VNI/AAAAAAAABBA/k363RCf2Ggg/s120-no/10458470_461665200665631_6741908667842794867_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD300s</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D300s</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/nU2nUZ';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/ixJEH7';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/6d5YJG" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-srwhMKnU00Q/VXEiPX9DO_I/AAAAAAAABBA/_u-3Ch1ehSo/s120-no/11081290_461665137332304_640019092375379763_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD300 Pro</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D300</h4>
+                                    
+                                    <input type="submit" value="More Info" onclick="window.location='http://goo.gl/6d5YJG';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/ow0sh2" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-8VIUYNI72o4/VXEiEJ8rQiI/AAAAAAAAA54/ENWcbRqtFvU/s120-no/10406817_461665557332262_8417825149302995600_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD800</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D800</h4>
+                                    
+                                    <input type="submit" value="More Info" onclick="window.location='http://goo.gl/ow0sh2';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/nTHp9Z" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-Kg8eyEzVmXQ/VXEiDqFqfLI/AAAAAAAABBA/AA7YVy7sjPU/s120-no/10171646_461665963998888_5099444242317551977_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD5000</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D5000</h4>
+                                    
+                                    <input type="submit" value="More Info" onclick="window.location='http://goo.gl/nTHp9Z';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-j_KGI-4fCFY/VXEiSKZ03QI/AAAAAAAAA_o/PVMHuJJnUKU/s120-no/11183453_461666487332169_9186329010843184592_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOS60D</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS 60D</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/B3TFNY';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/DYir75';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-hwOiYCm9syw/VXEiShhPW4I/AAAAAAAAA-s/xpApw917kL0/s120-no/11188180_461666733998811_8564277995201138935_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iEOSRebelT3i</h3>
+                                    
+                                    <h4>Guide And Training For Canon EOS Rebel T3i</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/HLzm0f';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/wSYkXI';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh3.googleusercontent.com/-lkM8ZnNtSQw/VXEiNr2zuNI/AAAAAAAAA9E/QVeFzCmN-nw/s152-no/11035843_461665077332310_8584511488073543992_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD90</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D90</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/2XLjV3';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/Ruxu1c';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh4.googleusercontent.com/-ND2iGCWweug/VXEiQB14bfI/AAAAAAAABAs/8mqfNQxt1KA/s120-no/11118487_461665667332251_8127707352828324213_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) iD3100</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D3100</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/rrXpGR';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/ntrkFa';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items">
+                                
+                                <img src="https://lh6.googleusercontent.com/-Q2b1t74GB7w/VXEiRfM71cI/AAAAAAAABAc/VxzNuIfSL4s/s120-no/11156227_461667893998695_6197588378487229748_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Nikon D5100 Guide</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D5100</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/u2DcPy';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='https://goo.gl/DJA3wr';" />
+                                    
+                                    </a>
+
+                        </div>
+                        <div id="shouldHidden4" style="display:none">
+                            <script>
+                                var i =1;
+                                </script>
+                            <a class="content-items" href="http://goo.gl/P43IH1">
+                                
+                                <img src="https://lh4.googleusercontent.com/-L-KsL8bd4DE/VXEiV_5hxuI/AAAAAAAABAk/TEeuicNBJjE/s120-no/1622810_420996878065797_335766269408376401_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Makeup Magic</h3>
+                                    
+                                    <h4>A great app to help you do better with thousands of video tutorials with many lessons of the different categories.</h4>
+                                    
+                                    <form action="http://goo.gl/P43IH1">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            <a class="content-items" href="http://goo.gl/PHu9Wz" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-BG9NRruq5xg/VXEiPe3BOwI/AAAAAAAAA9o/3CJsdaYLEEI/s120-no/11071075_461667510665400_978856137244145899_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For Corel VideoStudio</h3>
+                                    
+                                    <h4>Guide And Training For Sony Vegas</h4>
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/PHu9Wz';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-mYEJIUly3LA/VXEiRHys8mI/AAAAAAAAA-M/pCbCCICS5z8/s120-no/11150848_461668793998605_3534029497915907984_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For Quickbooks</h3>
+                                    
+                                    <h4>Guide And Training For Quickbooks</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/fRGH26';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/KuhCIV';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-HmWVX-BoTsk/VXEiLnUNT8I/AAAAAAAAA8U/budnrgCs3p8/s120-no/10983318_461668977331920_3623854926643424162_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For Sony Vegas</h3>
+                                    
+                                    <h4>Guide And Training For Sony Vegas</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/AxFaVW';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/I9sX2T';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh6.googleusercontent.com/-AzwfhuG_b9o/VXEiTZIt6fI/AAAAAAAAA_A/2tlV4Fe2vuI/s120-no/11196270_461667763998708_2249979270461716857_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For CorelDraw</h3>
+                                    
+                                    <h4>Guide And Training For CorelDraw</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/SF8sPp';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/NohwtC';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-XTVdJdz07E0/VXEiUerQmiI/AAAAAAAAA_k/6W53Rv7-YCI/s120-no/13719_461667830665368_1424047619107077385_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For MS Project</h3>
+                                    
+                                    <h4>Guide And Training For Nikon D300</h4>
+                                    
+                                    <input type="submit" value="Nature" onclick="window.location='http://goo.gl/x5LLR4';" />
+                                    
+                                    <input type="submit" value="Pro" onclick="window.location='http://goo.gl/0tejFP';" />
+                                    
+                                    </a>
+                            
+                            <a class="content-items" href="http://goo.gl/ylZEdO" >
+                                
+                                <img src="https://lh4.googleusercontent.com/-ELn525jsBUg/VXEiSv3U9hI/AAAAAAAAA_I/SlAi8UQ1eTo/s120-no/11188317_461668673998617_5195986237805711401_n.jpg" class="album-img" height="72" width="72">
+                                    
+                                    <h3><script>document.write(i);i++;</script>) Videos Training For Premiere Elements</h3>
+                                    
+                                    <h4>Guide And Training For Premiere</h4>
+                                    
+                                    <form action="http://goo.gl/ylZEdO">
+                                        
+                                        <input type="submit" value="More Info">
+                                            
+                                            </form>
+                                    
+                                    </a>
+                            
+                            
+
+                        </div>
+                        
                     </div>
                     
                 </div>
                 
             </div>
             
-            </div>
             
-            </div>
+            
+            <script>
+                
+                
+                function didSelect(selected){
+                    var buttons = document.getElementsByClassName("menugroup");
+                    
+                    for(var id = 0; id < buttons.length; ++id){
+                        if(id==selected){
+                            buttons[id].setAttribute("class", "menugroup bold");
+                            document.getElementById('shouldHidden'+id).style.display = 'block';
+                        }
+                        else{
+                            buttons[id].setAttribute("class", "menugroup");
+                            document.getElementById('shouldHidden'+id).style.display = 'none';
+                        }
+                    }
+                }
+            
+            didSelect(0);
+                </script>
+            
             
         </body>
         
